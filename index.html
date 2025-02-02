@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Slide 1: Starting Question -->
+    <div class="slide" id="slide1">
+        <h1>Will you be my Valentine? 💖</h1>
+        <button onclick="showSlide('statement')">Yes 💖</button>
+        <button onclick="showSlide('slide2')">No 💔</button>
+    </div>
+
+    <!-- Slide 2: Are you sure? -->
+    <div class="slide" id="slide2">
+        <h1>Are you sure? 😢</h1>
+        <button onclick="showSlide('slide00')">Not really</button>
+        <button onclick="showSlide('slide3')">Yes 💔</button>
+    </div>
+
+    <!-- Slide 00: So you will accompany me? -->
+    <div class="slide" id="slide00">
+        <h1>So you will accompany me? 💖</h1>
+        <button onclick="showSlide('statement')">Yesss 💖</button>
+        <button onclick="showSlide('slide4')">No 💔</button>
+    </div>
+
+    <!-- Slide 3: Pretty please? -->
+    <div class="slide" id="slide3">
+        <h1>Pretty please? 🥺</h1>
+        <button onclick="showSlide('slide00')">OK, I'll think about it</button>
+        <button onclick="showSlide('slide4')">No 💔</button>
+    </div>
+
+    <!-- Slide 4: What if I give you chocolates? -->
+    <div class="slide" id="slide4">
+        <h1>What if I give you chocolates, lots of them? 🍫</h1>
+        <button onclick="showSlide('statement')">Yes, I would love to 💖</button>
+        <button onclick="showSlide('slide5')">No 💔</button>
+    </div>
+
+    <!-- Slide 5: One last chance? -->
+    <div class="slide" id="slide5">
+        <h1>One last chance, are you sure? 💔</h1>
+        <button onclick="showSlide('slide6')">Yes, not happening</button>
+        <button onclick="showSlide('slide00')">Okie..💖</button>
+    </div>
+
+    <!-- Slide 6: You are breaking my heart -->
+    <div class="slide" id="slide6">
+        <h1>You are breaking my heart 💔. Change your mind?</h1>
+        <button onclick="showSlide('slide3')">No way</button>
+        <button onclick="showSlide('statement')">Just kidding, anything for pookie 💖💖💖</button>
+    </div>
+
+    <!-- Final Statement -->
+    <div class="slide" id="statement">
+        <h1>Yey! I knew you would say yes! 💖</h1>
+        <p>Happy Valentine's Day! 💖</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

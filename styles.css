@@ -1,0 +1,122 @@
+/* General Styling */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Unique Backgrounds for Each Slide */
+#slide1 { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+#slide2 { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); }
+#slide3 { background: linear-gradient(135deg, #ffdde1, #ee9ca7); }
+#slide4 { background: linear-gradient(135deg, #fda085, #f6d365); }
+#slide5 { background: linear-gradient(135deg, #c2e9fb, #a1c4fd); }
+#slide6 { background: linear-gradient(135deg, #d4fc79, #96e6a1); }
+#slide00 { background: linear-gradient(135deg, #f093fb, #f5576c); }
+#statement { background: linear-gradient(135deg, #ff758c, #ff7eb3); }
+
+/* Slide Container */
+.slide {
+    display: none;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 80%;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Make sure the first slide is visible */
+#slide1 {
+    display: block;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 15px rgba(255, 105, 180, 0.9);
+}
+
+/* Buttons */
+button {
+    background-color: #ff477e;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.5rem;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #ff2e63;
+    transform: scale(1.2);
+}
+
+/* Floating Hearts */
+.heart, .cute-face {
+    position: absolute;
+    font-size: 2.5rem;
+    animation: floatingHearts 3s linear infinite;
+}
+
+/* Cute Blinking Faces */
+.cute-face {
+    font-size: 3rem;
+    animation: blink 1s infinite;
+}
+
+/* Slide Fade-in Effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Floating Hearts Animation */
+@keyframes floatingHearts {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100px); opacity: 0; }
+}
+
+/* Blinking Faces Animation */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+/* Special Final Slide */
+#statement {
+    background: linear-gradient(135deg, #ff477e, #ff85a2);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    position: relative;
+}
+
+/* Raining Hearts (Now Nonstop) */
+@keyframes heartRain {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+.raining-heart {
+    position: absolute;
+    font-size: 2.5rem;
+    color: #ff477e;
+    animation: heartRain 5s linear infinite;
+}
