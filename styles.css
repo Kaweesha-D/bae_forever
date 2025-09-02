@@ -120,3 +120,17 @@ button:hover {
     color: #ff477e;
     animation: heartRain 5s linear infinite;
 }
+
+.raining-flower {
+    position: fixed;
+    top: -10%;
+    font-size: 2rem;
+    animation-name: fall;
+    animation-timing-function: linear;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    from { transform: translateY(0); }
+    to { transform: translateY(110vh); }
+}
