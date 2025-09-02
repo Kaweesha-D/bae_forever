@@ -1,3 +1,4 @@
+// Show slides
 function showSlide(slideId) {
     console.log("Switching to:", slideId);
 
@@ -17,7 +18,27 @@ function showSlide(slideId) {
     }
 }
 
-// Floating hearts on every slide
+// 🌸 Continuous Flower Rain (for starting slide and all others)
+function startFlowerRain() {
+    const flowers = ["🌸", "🌹", "🌼", "🌷", "🌻", "💐"];
+    
+    setInterval(() => {
+        let flower = document.createElement("div");
+        flower.classList.add("raining-flower");
+        flower.innerHTML = flowers[Math.floor(Math.random() * flowers.length)];
+        flower.style.left = Math.random() * 100 + "vw";
+        flower.style.animationDuration = (Math.random() * 3 + 2) + "s";
+        flower.style.top = "-10%";
+        document.body.appendChild(flower);
+
+        // Remove after animation
+        setTimeout(() => {
+            flower.remove();
+        }, 5000);
+    }, 400); // one flower every 0.4s
+}
+
+// 💖 Existing hearts for final slide
 function addHearts() {
     let statementDiv = document.getElementById("statement");
     for (let i = 0; i < 20; i++) {
@@ -29,14 +50,13 @@ function addHearts() {
         heart.style.top = Math.random() * 20 + "%";
         statementDiv.appendChild(heart);
 
-        // Remove hearts after animation
         setTimeout(() => {
             heart.remove();
         }, 2000);
     }
 }
 
-// Raining Hearts on Final Slide (NOW NONSTOP)
+// ❤️ Heart rain on final slide
 function startHeartRain() {
     setInterval(() => {
         let heart = document.createElement("div");
@@ -47,14 +67,13 @@ function startHeartRain() {
         heart.style.top = "-10%";
         document.body.appendChild(heart);
 
-        // Remove after animation
         setTimeout(() => {
             heart.remove();
         }, 5000);
     }, 300);
 }
 
-// Cute Blinking Faces for Final Slide
+// 🥰 Cute faces for final slide
 function addCuteFaces() {
     let statementDiv = document.getElementById("statement");
     for (let i = 0; i < 10; i++) {
@@ -66,9 +85,14 @@ function addCuteFaces() {
         face.style.top = Math.random() * 50 + "%";
         statementDiv.appendChild(face);
 
-        // Remove faces after animation
         setTimeout(() => {
             face.remove();
         }, 4000);
     }
 }
+
+// 🚀 Start flower rain as soon as the page loads
+window.onload = () => {
+    showSlide("slide1");  // show first slide
+    startFlowerRain();    // start raining flowers
+};
