@@ -134,3 +134,8 @@ button:hover {
     from { transform: translateY(0); }
     to { transform: translateY(110vh); }
 }
+@keyframes fall {
+    from { transform: translateY(0) rotate(0deg); }
+    to { transform: translateY(110vh) rotate(360deg); }
+}
+
