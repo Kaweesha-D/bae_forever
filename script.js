@@ -27,15 +27,15 @@ function startFlowerRain() {
         flower.classList.add("raining-flower");
         flower.innerHTML = flowers[Math.floor(Math.random() * flowers.length)];
         flower.style.left = Math.random() * 100 + "vw";
-        flower.style.animationDuration = (Math.random() * 3 + 2) + "s";
+        flower.style.animationDuration = (Math.random() * 5 + 5) + "s";
         flower.style.top = "-10%";
         document.body.appendChild(flower);
 
         // Remove after animation
         setTimeout(() => {
             flower.remove();
-        }, 5000);
-    }, 400); // one flower every 0.4s
+        }, 11000);
+    }, 800); // one flower every 0.4s
 }
 
 // 💖 Existing hearts for final slide
@@ -96,3 +96,4 @@ window.onload = () => {
     showSlide("slide1");  // show first slide
     startFlowerRain();    // start raining flowers
 };
+
